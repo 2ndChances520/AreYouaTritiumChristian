@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are you a Tritium Christian?</title>
+    <style>
+        /* CSS Variables for Theme */
+        :root {
+            --bg-dark: #0f1115;
+            --bg-card: #1a1d24;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --tritium-green: #39ff14;
+            --tritium-glow: rgba(57, 255, 20, 0.4);
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+
+        /* Layout & Typography */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: #ffffff;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Header / Hero Section */
+        header {
+            text-align: center;
+            padding: 80px 20px 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: radial-gradient(circle at top, #1a221a 0%, var(--bg-dark) 70%);
+        }
+
+        .church-name {
+            color: var(--tritium-green);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px var(--tritium-glow);
+        }
+
+        .speaker-info {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Vial Graphic */
+        .vial-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .vial {
+            width: 15px;
+            height: 60px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            background: var(--tritium-green);
+            box-shadow: 0 0 25px var(--tritium-green), inset 0 0 10px rgba(255,255,255,0.8);
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 15px var(--tritium-green), inset 0 0 5px rgba(255,255,255,0.8); }
+            100% { box-shadow: 0 0 35px var(--tritium-green), inset 0 0 15px rgba(255,255,255,1); }
+        }
+
+        /* Scripture Blockquotes */
+        blockquote {
+            background: var(--bg-card);
+            border-left: 4px solid var(--tritium-green);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 1.15rem;
+            font-style: italic;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        blockquote span.reference {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--tritium-green);
+            font-weight: bold;
+            font-style: normal;
+            font-family: var(--font-heading);
+        }
+
+        /* Main Content Sections */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title::before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: var(--tritium-green);
+            box-shadow: 0 0 10px var(--tritium-green);
+        }
+
+        /* Sermon Points */
+        .point-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-top: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .point-card:hover {
+            border-top: 2px solid var(--tritium-green);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(57, 255, 20, 0.05);
+        }
+
+        .point-number {
+            color: var(--tritium-green);
+            font-weight: 900;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .point-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        /* Interactive Note */
+        .action-note {
+            text-align: center;
+            padding: 15px;
+            border: 1px dashed var(--tritium-green);
+            border-radius: 8px;
+            color: var(--tritium-green);
+            font-size: 0.95rem;
+            margin: 40px 0;
+            background: rgba(57, 255, 20, 0.05);
+        }
+
+        /* Prayer Section */
+        .prayer-box {
+            background: linear-gradient(145deg, var(--bg-card), var(--bg-dark));
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .prayer-box p {
+            font-style: italic;
+            color: #fff;
+        }
+
+        /* Scroll Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            section { padding: 40px 0; }
+            .point-card { padding: 20px; }
+            blockquote { padding: 20px; font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="fade-in visible">
+        <div class="container">
+            <span class="church-name">Glidewell Baptist Church</span>
+            <h1>Are you a Tritium Christian?</h1>
+            <p class="speaker-info">Message by James Sopok</p>
+            <div class="vial-container">
+                <div class="vial"></div>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 20px;">
+                Scroll to follow along with today's message
+            </p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Introduction Section -->
+        <section class="fade-in">
+            <h2 class="section-title">Welcome</h2>
+            <p>Good morning, church family. My name is James Sopok. I've been married to my wife for over 13 years, we have two boys. I've been going to church at Glidewell Baptist church for over a decade now. I served in the Sound department for most of that time and I'm thankful for that position. I love the stars and learning more about God's design.</p>
+            
+            <p>It is a joy to bring you this message, which makes me think of Proverbs 4:7.</p>
+
+            <blockquote>
+                "Wisdom is the principal thing; Therefore get wisdom. And in all your getting, get understanding."
+                <span class="reference">— Proverbs 4:7</span>
+            </blockquote>
+        </section>
+
+        <!-- The Prop Section -->
+        <section class="fade-in">
+            <h2 class="section-title">The Prop</h2>
+            <p>Before we read the Word, I want to show y’all something I brought with me this morning. Unless you’re sitting on the front row here, you probably can’t see exactly what I’m holding. It’s just a little piece of 3D printed filament on a ball chain with a tiny glass tube inside. But there’s something mighty special about this little tube. Inside this glass is a gas called <strong>tritium (H3)</strong>.</p>
+            
+            <p>Tritium isn't just found; it is forged. It requires a moment of cosmic impact. Picture a supernova—a star exploding with such ferocity that it breaks the very fabric of its own composition. In the heat of that explosion, neutrons are liberated, flying through space like bullets. When one of these high-speed neutrons strikes a standard atom of hydrogen, it changes that atom's identity forever. It adds weight, it adds complexity, and it creates tritium. <em>It is an element born of collision.</em></p>
+
+            <p>Tritium is a special isotope that is constantly giving off energy. And the inside of this little glass tube is coated with a special powder. When the energy from the tritium hits that powder, it glows.</p>
+
+            <div class="action-note">
+                ( Passing the vial around — Adults only please )
+            </div>
+
+            <p>We’ve all seen glow-in-the-dark stuff before, right? When I bought my home over 13 years ago, it had those glow in the dark stars on the living room ceiling... but today they dream of shining, but have lost the ability long ago. Those plastic stars have to be charged up by the lights in the room. Their light is entirely dependent on the environment around them. <em>(Remind you of anyone you know?)</em></p>
+
+            <p>But not tritium. It doesn't need external light to charge it up. <strong>The source of its power is on the INSIDE.</strong></p>
+        </section>
+
+        <!-- Main Scripture Section -->
+        <section class="fade-in">
+            <h2 class="section-title">The Scripture</h2>
+            <p>Brothers and sisters, when I learned how this little vial worked, I couldn’t help but think about what Jesus said to us on the side of that mountain:</p>
+            
+            <blockquote>
+                "You are the light of the world. A city set on a hill cannot be hidden. Nor do people light a lamp and put it under a basket, but on a stand, and it gives light to all in the house. In the same way, let your light shine before others, so that they may see your good works and give glory to your Father who is in heaven."
+                <span class="reference">— Matthew 5:14-16</span>
+            </blockquote>
+
+            <p>I want to offer you three simple truths today about what it means to be a "Tritium Christian" in a dark world.</p>
+        </section>
+
+        <!-- 3 Points Section -->
+        <section id="points">
+            
+            <!-- Point 1 -->
+            <div class="point-card fade-in">
+                <span class="point-number">Point Number One</span>
+                <h3>Our power source is internal, not external.</h3>
+                <p>There are a lot of folks walking around today who are like those plastic glow-in-the-dark stars. They look bright on Sunday morning when they’re in the sanctuary, surrounded by the warm light of the church. But then Monday morning rolls around. They go out into a dark world—into the workplace, into the schoolhouse, into a culture that does not love the Lord.</p>
+                <p>Because their light is only external, they fade out. But a born-again, blood-bought Christian is like this tritium vial. When you give your life to Jesus Christ, He doesn't just give you a new set of rules to follow. <strong>He puts His very Spirit INSIDE OF YOU!</strong></p>
+                <p>Romans 8 says the same Spirit that raised Jesus from the dead dwells in you. You have an internal power source. You don't need the culture to agree with you to keep shining.</p>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="point-card fade-in">
+                <span class="point-number">Point Number Two</span>
+                <h3>The darker the room, the brighter the light.</h3>
+                <p>If I take this tritium vial outside at high noon in the middle of a Missouri summer, you won't even notice it's glowing. But if I take it down into a storm cellar in the middle of the night, it shines like a beacon.</p>
+                <p>Church, we look around at the news today, and we wring our hands. But Philippians 2:15 tells us that we are to be blameless and innocent, children of God without blemish in the midst of a crooked and twisted generation, <em>among whom we shine as lights in the world.</em></p>
+                <p>God did not call us to complain about the darkness. He called us to shine in it! The darkness isn't a threat to the tritium; the darkness is the tritium's opportunity to do exactly what it was made to do. Shine Bright!</p>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="point-card fade-in">
+                <span class="point-number">Point Number Three</span>
+                <h3>It’s a steady, lasting light.</h3>
+                <p>This little vial doesn’t flash like a strobe light. It doesn’t explode like a firecracker. It just gives off a quiet, steady, enduring glow, day after day, year after year.</p>
+                <p>Sometimes, in our walk with Christ, we think we need to be a fireworks show. But let me tell you what changes the world: a Christian who just keeps glowing. It makes me think of my Brother David Stidman, 20+ years in maximum security prison, talk about dark—and the Holy Spirit keeps him glowing.</p>
+                <p>A Christian who is faithful to their spouse, year after year. A parent who faithfully prays for their wayward child, night after night. A church member who shows up and serves, week after week. It’s that quiet, steady, internal light that points a lost world to Jesus.</p>
+            </div>
+
+        </section>
+
+        <!-- Conclusion & Invitation Section -->
+        <section class="fade-in">
+            <h2 class="section-title">Invitation</h2>
+            <p>As we finish up here, I want to ask you a question. <strong>What kind of light are you this morning?</strong></p>
+            
+            <p>Maybe you’re here, and you’ve been trying to live the Christian life on your own strength. You’ve been trying to "charge yourself up" with good works, but you just keep fading when the pressure is on. You’re exhausted. You need to surrender your life to Jesus Christ and let the Holy Spirit move in.</p>
+            
+            <p>Or maybe you’re a believer, but you’ve been letting the darkness of this world intimidate you. You’ve put your vial in your pocket. You’ve hidden your light under a basket. Today is the day to take it out and sit it on a hill.</p>
+            
+            <p>If you don't know the Lord, the altars are open, or you can pray right where you sit too. Come and let me introduce you to the Light of the World. If you just need to pray for strength to shine in a dark workplace or a dark family situation, you come too. Let's pray.</p>
+
+            <div class="prayer-box fade-in">
+                <h3 style="color: var(--tritium-green); margin-bottom: 15px; font-size: 1.2rem;">Closing Prayer</h3>
+                <p>"Dear Father, I thank You, first for the ability to share this lesson you gave me, and that You did not leave me in the dark. You sent Your Son, Jesus, to be the Light of the World, and then You put His Spirit inside of me. Lord, forgive me for the times I’ve tried to shine on my own power and faded out, and hurt those around me. Fill me afresh today. Give me the courage to be like this little vial—shining steady and bright, completely unbothered by the darkness around me, pointing everyone who sees me straight to You. In Jesus' name. Amen."</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JavaScript for Fade-in Scroll Animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const faders = document.querySelectorAll('.fade-in');
+            
+            const appearOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+</body>
+</html>
