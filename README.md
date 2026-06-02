@@ -34,7 +34,7 @@ The design takes inspiration from the sermon's core metaphor: **Tritium (H3)**â€
 ## ðŸ“¸ Sneak Peek
 
 *(Add a screenshot of your webpage here!)*
-> `<img src="link-to-your-screenshot.png" alt="Tritium Christian Webpage Preview" width="100%">`
+> `[<img src="link-to-your-screenshot.png" alt="Tritium Christian Webpage Preview" width="100%">](https://github.com/2ndChances520/AreYouaTritiumChristian/blob/main/Follow%20along%20Flyer.png?raw=true)`
 
 ---
 
