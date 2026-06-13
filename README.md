@@ -17,7 +17,7 @@
 
 **"Are you a Tritium Christian?"** is a responsive, aesthetically striking web page hosting a sermon delivered by James Sopok at Glidewell Baptist Church. 
 
-The design takes inspiration from the sermon's core metaphor: **Tritium (H3)**—a radioactive isotope that glows continuously from an internal energy source, without needing external light to "charge" it. The UI reflects this with a sleek dark mode, pulsing neon-green animations, and smooth scroll reveals.
+The design takes inspiration from the sermon's core metaphor: **Tritium (H3)**—a radioactive isotope that glows continuously from an internal energy source, without needing external light to "charge" it. The UI reflects this with a sleek dark mode, pulsing neon-green animations, and smooth scroll reveals. YOUTUBE INFO: https://www.youtube.com/watch?v=NhXNJgZD6NA.
 
 ---
 
